@@ -4,6 +4,15 @@ const fs = require("fs");
 
 const generateHtml = require("./utils/generateHtml");
 
+// Questions
+const questions = [
+  {
+    type: "input",
+    message: "What is the title of your project?",
+    name: "title",
+  },
+];
+
 // Examples
 function Person(firstName, lastName, age) {
   this.firstName = firstName;
