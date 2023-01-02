@@ -13,27 +13,15 @@ test("is an object(potato sandwich)", () => {
   expect(isObject).toBe(true);
 });
 
-test("Id is an integer", () => {
+test("Can set object properties using constructor", () => {
   const employee = new Employee("Russ", 49999, "Russ@gmail.com");
 
-  let isObject = false;
-  if (typeof employee.id === "int") {
-    isObject = true;
-  }
-
-  //   5 > 15
-  expect(isObject).toBe(true);
+  expect(employee.name).toBe("Russ");
+  expect(employee.id).toBe(49999);
+  expect(employee.email).tobe("Russ@gmail.com");
 });
 
-const x = 5;
-const y = 15;
-
-function checkIfGreater() {
-  if (x > y) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 checkIfGreater();
+
+// Test gitters
+test();
