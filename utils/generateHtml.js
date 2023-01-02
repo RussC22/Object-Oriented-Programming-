@@ -1,21 +1,17 @@
-// The function to generate markdown for README
+// The function to generate markdown for Html
 function generateHtml(data) {
   return `
-    # ${data.title}
-    https://github.com/${data.Username}/${data.title}
-    # Description
-      ${data.Description}
+    # Name
+    - Hi, My name is ${data.Name}!
+    # Position
+      - My current position is ${data.Position}.
   
-    ## Table of contents
-      ${data.Content}
-    ## License
-      ${renderLicenseBadge(data.license)}
-      ${renderLicenseLink(data.license)}
-      ${renderLicenseSection(data.license)}
-    ## Installation
-      - The following ${
-        data.Installation
-      } is necessary dependencies must be installed to run the application.
+    ## Contact 
+      - The best way to contact me is at ${data.Contact}.
+    ## 
+    
+    ## ManagerInfo
+      - My manager is ${data.ManagerInfo}
     ## Usage
       - In order to use this app, ${data.Usage} license.
     ## Contributing
@@ -23,9 +19,7 @@ function generateHtml(data) {
     ## Tests
       - The following is needed to run the test: ${data.Tests}
     ## Questions
-      - If you have any questions about the repo, open an issue or contact ${
-        data.Usage
-      }
+      - If you have any questions about the repo, open an issue or contact ${data.Usage}
   `;
 }
 

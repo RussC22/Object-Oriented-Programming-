@@ -3,13 +3,34 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 const generateHtml = require("./utils/generateHtml");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
+const Employee = require("./lib/Employee");
 
 // Questions
 const questions = [
   {
     type: "input",
-    message: "What is the title of your project?",
-    name: "title",
+    message: "Employees name?",
+    name: "Employee",
+  },
+  {
+    type: "list",
+    message: "Employees position",
+    name: "Position",
+    choices: ["Engineer", "Intern", "Manager"],
+  },
+  {
+    type: "list",
+    name: "Contact",
+    message: "Choose your email or cell number.",
+    choices: ["Email", "Number"],
+  },
+  {
+    type: "input",
+    message: "Employees manager?",
+    name: "ManagerInfo",
   },
 ];
 
