@@ -7,13 +7,17 @@ test("is an object(Russ)", () => {
   if (typeof employee === "object") {
     isObject = true;
   }
-
   //   isObject === true
   expect(isObject).toBe(true);
 });
-// object test
+// object and integer tests
 test("Can set object properties using constructor", () => {
   expect(employee.name).toBe("Russ");
+});
+test("Can set integer properties using constructor", () => {
   expect(employee.id).toBe(49999);
+});
+
+test("Can set object properties using constructor", () => {
   expect(employee.email).toBe("Russ@gmail.com");
 });
