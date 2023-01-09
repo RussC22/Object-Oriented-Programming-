@@ -1,6 +1,6 @@
-// manager variable
+// Manager variable
 const Manager = require("../lib/Manager");
-
+// object test
 test("is an object(potato sandwich)", () => {
   const manager = new Manager("Russ", 49999, "Russ@gmail.com");
 
@@ -12,28 +12,10 @@ test("is an object(potato sandwich)", () => {
   //   isObject === true
   expect(isObject).toBe(true);
 });
-
+// interger test
 test("Id is an integer", () => {
   const manager = new Manager("Russ", 49999, "Russ@gmail.com");
-
-  let isObject = false;
-  if (typeof manager.id === "int") {
-    isObject = true;
-  }
-
-  //   5 > 15
-  expect(isObject).toBe(true);
+  expect(Number(manager.getId()));
+  expect(manager.getId()).toBe(49999);
 });
-
-const x = 5;
-const y = 15;
-
-function checkIfGreater() {
-  if (x > y) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-checkIfGreater();
+// email test
