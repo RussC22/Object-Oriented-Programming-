@@ -7,8 +7,10 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const Employee = require("./lib/Employee");
+const path = require("path");
+const Team = [];
 
-// Questions
+//  Manager Questions
 const questions = [
   {
     type: "input",
@@ -16,55 +18,126 @@ const questions = [
     name: "Employee",
   },
   {
-    type: "list",
-    message: "Employees position",
-    name: "Position",
-    choices: ["Engineer", "Intern", "Manager"],
-  },
-  {
-    type: "list",
-    name: "Contact",
-    message: "Choose your email or cell number.",
-    choices: ["Email", "Number"],
+    type: "input",
+    message: "managers ID",
+    name: "ID",
   },
   {
     type: "input",
-    message: "Employees manager?",
-    name: "ManagerInfo",
+    name: "Contact",
+    message: "Input your email.",
+  },
+  {
+    type: "input",
+    message: "Manager Office Number",
+    name: "officeNumber",
   },
 ];
+// Manager created
+inquirer.prompt(questions).then((answers) => {
+  const manager = new Manager(
+    answers.Employee,
+    answers.ID,
+    answers.Contact,
+    answers.officeNumber
+  );
 
-// Examples
-function Person(firstName, lastName, age) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.age = age;
+  Team.push(manager);
+  createTeam();
+});
+
+// Function for team
+function createTeam() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        message: "Which Team memeber do you want to create next?",
+        name: "Position",
+        choices: ["Engineer", "Intern", "Team is complete"],
+      },
+    ])
+    // writing file and directing it to the html based on type of employee
+    .then((answer) => {
+      if (answer.Position === "Engineer") {
+        createEngineer();
+      } else if (answer.Position === "Intern") {
+        createIntern();
+      } else {
+        fs.writeFileSync(
+          path.join(__dirname, "/output", "Team.html"),
+          generateHtml(Team)
+        );
+      }
+    });
 }
-
-const will = new Person("Will", "Smith", 53);
-const jaiden = new Person("Jaiden", "Smith", 24);
-const willow = new Person("Williow", "Smith", 21);
-
-console.log("Will", will);
-
-// / The function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("success!");
-    }
-  });
+function createEngineer() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Engineers name?",
+        name: "Employee",
+      },
+      {
+        type: "input",
+        message: "Engineers ID",
+        name: "ID",
+      },
+      {
+        type: "input",
+        name: "Contact",
+        message: "Enginners your email.",
+      },
+      {
+        type: "input",
+        message: "Engineers Github",
+        name: "Github",
+      },
+    ])
+    .then((answer) => {
+      const engineer = new Engineer(
+        answer.Employee,
+        answer.ID,
+        answer.Contact,
+        answer.Github
+      );
+      Team.push(engineer);
+      createTeam();
+    });
 }
-
-// / The function to initialize app & save app in outbound folder
-function init() {
-  inquirer.prompt(questions).then(function (data) {
-    console.log(data);
-    const filename = "./outbound/" + data.title + ".html";
-    writeToFile(filename, generateHtml(data));
-  });
+function createIntern() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Interns name?",
+        name: "Employee",
+      },
+      {
+        type: "input",
+        message: "Interns ID",
+        name: "ID",
+      },
+      {
+        type: "input",
+        name: "Contact",
+        message: "Interns your email.",
+      },
+      {
+        type: "input",
+        message: "Engineers School",
+        name: "School",
+      },
+    ])
+    .then((answer) => {
+      const intern = new Intern(
+        answer.Employee,
+        answer.ID,
+        answer.Contact,
+        answer.School
+      );
+      Team.push(intern);
+      createTeam();
+    });
 }
-
-init();

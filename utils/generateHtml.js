@@ -1,26 +1,27 @@
-// The function to generate markdown for Html
+// The function to generate Html for Team
+
+// foor-loop over data.length
+// style with bootstrap
+// mail.to
+// concate cards from variables created
 function generateHtml(data) {
-  return `
-    # Name
-    - Hi, My name is ${data.Name}!
-    # Position
-      - My current position is ${data.Position}.
-  
-    ## Contact 
-      - The best way to contact me is at ${data.Contact}.
-    ## 
-    
-    ## ManagerInfo
-      - My manager is ${data.ManagerInfo}
-    ## Usage
-      - In order to use this app, ${data.Usage} license.
-    ## Contributing
-      - Contributors: ${data.Contributing} 
-    ## Tests
-      - The following is needed to run the test: ${data.Tests}
-    ## Questions
-      - If you have any questions about the repo, open an issue or contact ${data.Usage}
+  return `<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>My Team</title>
+    </head>
+    <body>
+      <h1>My Team</h1>
+      <main>
+          ${generateTeam(data)}
+      </main>
+    </body>
+  </html>
   `;
 }
+function generateTeam(data) {}
 
 module.exports = generateHtml;
