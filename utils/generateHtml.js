@@ -16,7 +16,14 @@ function generateHtml(data) {
     <body>
       <h1>My Team</h1>
       <main>
-          ${generateTeam(data)}
+          ${
+            generateTeam(data)
+
+            //   .map(classes)
+            // { if (classes.getRole() === "Manager"){
+            //   return `<h3>${classes.getofficeNumber}</h3>`
+            // }
+          }};
       </main>
     </body>
   </html>

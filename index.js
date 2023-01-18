@@ -43,6 +43,7 @@ inquirer.prompt(questions).then((answers) => {
   );
 
   Team.push(manager);
+  console.log(manager);
   createTeam();
 });
 
@@ -65,7 +66,8 @@ function createTeam() {
         createIntern();
       } else {
         fs.writeFileSync(
-          path.join(__dirname, "/output", "Team.html"),
+          path.join(__dirname, "index.html"),
+          // "./dist/index.html"),
           generateHtml(Team)
         );
       }
