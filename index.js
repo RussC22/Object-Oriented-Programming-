@@ -66,8 +66,7 @@ function createTeam() {
         createIntern();
       } else {
         fs.writeFileSync(
-          path.join(__dirname, "index.html"),
-          // "./dist/index.html"),
+          path.join(__dirname, "./dist/index.html"),
           generateHtml(Team)
         );
       }
