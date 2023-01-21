@@ -63,7 +63,7 @@ function generateTeam(data) {
   `;
     }
     if (data[i].getRole() === "Intern") {
-      html += `<div class="card"><div class="card-header text-bg-primary p-3 style="width: 18rem;">
+      html += `<div class="card"><div class="card-header text-bg-primary p-3 style="width: 18rem;>
       <h2>${data[i].getName()}</h2>
       <h2>Intern</h2></div>
       <div class="card-body">

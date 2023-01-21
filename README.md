@@ -2,6 +2,9 @@
 
 ## Project Description
 
+- This project is a Node.js command-line application that takes in a managers team information regarding their github, employee id, educational background, email, and office number. using the command lines an employee or emploees' informations is collected. Once the user is finished collecting a single employee or teams information, the application generates an HTML file displaying the team info and writes it to the dist directory.
+- Jest was used to add tests for each of the employee classes to keep the code maintainable. Give it a Try!!!
+
 ## User Story
 
 AS A manager
