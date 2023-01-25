@@ -5,6 +5,9 @@
 - This project is a Node.js command-line application that takes in a managers team information regarding their github, employee id, educational background, email, and office number. using the command lines an employee or emploees' informations is collected. Once the user is finished collecting a single employee or teams information, the application generates an HTML file displaying the team info and writes it to the dist directory.
 - Jest was used to add tests for each of the employee classes to keep the code maintainable. Give it a Try!!!
 
+<img width="1430" alt="TeamProfileGenerator" src="https://user-images.githubusercontent.com/114961971/214591597-6f150123-01b2-42ba-b9fb-d67f8a7b84bd.png">
+
+
 ## User Story
 
 AS A manager
@@ -26,6 +29,10 @@ SO THAT I have quick access to their emails and GitHub profiles
 5. User must look in the dist folder for their created employee file.
 
 ## Important Links
+
+Video: https://drive.google.com/file/d/1SfF7nyz0sN7UFZ4R6WqvKprZ38OzWVm1/view
+Github: https://github.com/RussC22/Object-Oriented-Programming-
+[TeamProfileGenerator.webm](https://user-images.githubusercontent.com/114961971/214591982-ff9d4600-48be-4dc6-af25-832bf91aacfa.webm)
 
 ## Technology Used
 
