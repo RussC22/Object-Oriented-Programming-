@@ -30,9 +30,8 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Important Links
 
-- Video: https://drive.google.com/file/d/1SfF7nyz0sN7UFZ4R6WqvKprZ38OzWVm1/view
-- ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white): https://github.com/RussC22/Object-Oriented-Programming-
-- [TeamProfileGenerator.webm](https://user-images.githubusercontent.com/114961971/214591982-ff9d4600-48be-4dc6-af25-832bf91aacfa.webm)
+- <a href='https://drive.google.com/file/d/1SfF7nyz0sN7UFZ4R6WqvKprZ38OzWVm1/view' target="https://drive.google.com/file/d/1SfF7nyz0sN7UFZ4R6WqvKprZ38OzWVm1/view"><img alt='youtube' src='https://img.shields.io/badge/Video-100000?style=plastic&logo=youtube&logoColor=B0264D&labelColor=E0DFD9&color=000000'/></a>
+- <a href='https://https://github.com/RussC22/Object-Oriented-Programming-' target="_blank"><img alt='Github' src='https://img.shields.io/badge/Github-100000?style=plastic&logo=Github&logoColor=8D22FF&labelColor=151304&color=C707A4'/></a>
 
 ## Technology Used
 
