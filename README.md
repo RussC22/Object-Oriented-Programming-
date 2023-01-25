@@ -30,9 +30,9 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Important Links
 
-Video: https://drive.google.com/file/d/1SfF7nyz0sN7UFZ4R6WqvKprZ38OzWVm1/view
-Github: https://github.com/RussC22/Object-Oriented-Programming-
-[TeamProfileGenerator.webm](https://user-images.githubusercontent.com/114961971/214591982-ff9d4600-48be-4dc6-af25-832bf91aacfa.webm)
+- Video: https://drive.google.com/file/d/1SfF7nyz0sN7UFZ4R6WqvKprZ38OzWVm1/view
+- Github: https://github.com/RussC22/Object-Oriented-Programming-
+- [TeamProfileGenerator.webm](https://user-images.githubusercontent.com/114961971/214591982-ff9d4600-48be-4dc6-af25-832bf91aacfa.webm)
 
 ## Technology Used
 
